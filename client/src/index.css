@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: #f8f8f8;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  button, .btn, nav {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.bg-gold {
+  background-color: #ffdf00;
+}
+
+.text-gold {
+  color: #ffdf00;
+}
+
+.border-gold {
+  border-color: #ffdf00;
+}
+
+.bg-darkBg {
+  background-color: #121212;
+}
+
+.bg-darkGray {
+  background-color: #1e1e1e;
+}
+
+.text-lightText {
+  color: #f8f8f8;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.gold-gradient {
+  background: linear-gradient(90deg, rgba(255,223,0,0.15) 0%, rgba(255,223,0,0.05) 100%);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(255,223,0,0.1), 0 4px 6px -2px rgba(255,223,0,0.05);
+}
+
+/* Timeline styling */
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  height: calc(100% + 2rem);
+  width: 2px;
+  background-color: #ffdf00;
+  left: 1rem;
+  top: 2rem;
+  z-index: -1;
+}
+
+.timeline-item:last-child::before {
+  display: none;
+}
+
+.bg-image {
+  background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
